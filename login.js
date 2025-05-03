@@ -50,7 +50,7 @@ document.getElementById('signupForm').addEventListener('submit', (e) => {
       sendEmailVerification(userCredential.user)
         .then(() => {
           // Redirect to login page after signup
-          window.location.href = "login.html";
+          window.location.href = "index.html";
         });
     })
     .catch((error) => {
@@ -67,7 +67,7 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       if (userCredential.user.emailVerified) {
-        window.location.href = "index.html";
+        window.location.href = "fitlife.html";
       } else {
         alert("Please verify your email before logging in.");
         signOut(auth);
