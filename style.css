@@ -41,7 +41,7 @@ body {
   background: rgba(255, 255, 255, 0.4);
 }
 
-.slider #slider{
+.gifslider #gifslider{
   width: 100%;
   position: relative;
   max-width: 900px;
@@ -51,12 +51,12 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.slide {
+.gifslide {
   display: none;
   text-align: center;
 }
 
-.slide img {
+.gifslide img {
   width: 100%;
   border-radius: 10px;
 }
@@ -162,7 +162,7 @@ button:hover {
   color: #fff;
 }
 
-.slider-container {
+.gifslider-container {
   position: relative;
   width: 80%;
   height: 300px;
@@ -583,4 +583,101 @@ background-attachment: fixed;
 .link{
   top: 50px;
   padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+/* Slider Section */
+.slider-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: transparent; /* Make the background transparent to merge with the gradient */
+  position: relative; /* Ensure proper layering with background */
+}
+
+/* Slider Title */
+.slider-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  background: transparent; /* Make the background transparent for the effect */
+}
+
+/* Slider - Flex to align items in a row */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Slide */
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  text-align: center;
+  background: transparent; /* Ensure background is transparent */
+}
+
+/* Images inside each slide */
+.slide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading within each slide */
+.slide h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+/* Description text in each slide */
+.slide p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Navigation buttons (prev/next) */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }
